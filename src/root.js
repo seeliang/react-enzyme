@@ -1,6 +1,6 @@
-import React from 'react';
-
-class Root extends React.Component {
+import React, {Component} from 'react';
+import wrapper from './higherOrderWrap';
+class Root extends Component {
   constructor(props) {
     super(props);
     this.click = this.click.bind(this);
@@ -21,4 +21,4 @@ class Root extends React.Component {
   }
 }
 
-module.exports = Root;
+export default wrapper(Root);
