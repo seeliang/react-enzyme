@@ -1,6 +1,5 @@
 
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import Enzyme from 'enzyme';
 import {mount ,shallow} from 'enzyme';
