@@ -7,7 +7,7 @@ class Root extends Component {
   }
 
   click() {
-    alert('click this');
+    // alert('click this');
     this.props.submit();
   }
 
