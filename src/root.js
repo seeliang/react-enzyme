@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import wrapper from './higherOrderWrap';
+
 class Root extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +16,7 @@ class Root extends Component {
     return (
       <form onSubmit={() => this.click()}>
         <h1> Hello world</h1>
-        <input type="checkbox"/>
+        <input type="checkbox" />
         <button type="submit"> this</button>
       </form>
     );
