@@ -4,7 +4,9 @@ const wrapper = Render => {
   return class Wrap extends Component {
 
     render() {
-      return  <Render news={42}/>;
+      return  (<Render news={42}
+        {...this.props}
+      />);
     }
   };
 };
