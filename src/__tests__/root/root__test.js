@@ -14,7 +14,7 @@ describe('some basics', () => {
   it('shall render', () => {
     mount(
       <Root/>
-    )
+    );
   });
 
   it('shall have input',() => {
@@ -32,13 +32,13 @@ describe('some basics', () => {
   });
 
   it ('shall be able to submit', () => {
-    const submit = jest.fn();
-    const tree = mount (
-      <Root submit={submit}/>
-    );
+    const submit = jest.fn(),
+      tree = mount (
+        <Root submit={submit}/>
+      );
     tree.find('form').simulate('submit');
     expect(submit.mock.calls).toHaveLength(1);
-  })
+  });
 
 
 });
