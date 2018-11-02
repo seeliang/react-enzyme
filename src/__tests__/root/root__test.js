@@ -1,6 +1,5 @@
 
 import React from 'react';
-import renderer from 'react-test-renderer';
 
 import Enzyme from 'enzyme';
 import {mount ,shallow} from 'enzyme';
@@ -11,11 +10,10 @@ import Root from '../../root';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('some basics', () => {
-  it('shall matches snapshot', () => {
-    const tree = renderer.create(
+  it('shall render', () => {
+    mount(
       <Root/>
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
+    );
   });
 
   it('shall have input',() => {
@@ -31,4 +29,15 @@ describe('some basics', () => {
     );
     expect(tree.prop('news')).toBe(42);
   });
+
+  it ('shall be able to submit', () => {
+    const submit = jest.fn(),
+      tree = mount (
+        <Root submit={submit}/>
+      );
+    tree.find('form').simulate('submit');
+    expect(submit.mock.calls).toHaveLength(1);
+  });
+
+
 });

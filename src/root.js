@@ -7,16 +7,17 @@ class Root extends Component {
   }
 
   click() {
-    alert('click this');
+    // alert('click this');
+    this.props.submit();
   }
 
   render() {
     return (
-      <div>
+      <form onSubmit={() => this.click()}>
         <h1> Hello world</h1>
         <input type="checkbox"/>
-        <button onClick={this.click}> try this</button>
-      </div>
+        <button type="submit"> this</button>
+      </form>
     );
   }
 }
