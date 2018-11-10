@@ -1,15 +1,1 @@
-module.exports = {
-  "env": {
-    "node": true,
-    "browser": true,
-    "es6": true,
-    "jest": true
-  },
-  "extends": "airbnb",
-  "rules": {
-    "react/jsx-filename-extension": 0,
-    "react/no-array-index-key": 0,
-    "import/prefer-default-export": 0,
-    "react/prop-types": 1
-  }
-}
+module.exports = require('ko-eslint-react');
