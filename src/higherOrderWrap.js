@@ -1,14 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-const wrapper = Render => {
-  return class Wrap extends Component {
+const wrapper = Render => props => (
+  <Render
+    news={42}
+    {...props}
+  />
+);
 
-    render() {
-      return  (<Render news={42}
-        {...this.props}
-      />);
-    }
-  };
-};
 
 export default wrapper;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-dom';
-import Root from './root.js';
+import { render } from 'react-dom';
+import Root from './root';
 
-render(<Root/>, document.getElementById('app'));
+render(<Root />, document.getElementById('app'));
